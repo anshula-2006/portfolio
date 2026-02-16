@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anshula Addanki | Web Design & Development Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;600&display=swap');
+
+    :root {
+      --bg: #0b1020;
+      --bg-soft: #101833;
+      --card: rgba(16, 24, 51, 0.78);
+      --text: #e7ecff;
+      --muted: #aeb9e8;
+      --line: rgba(174, 185, 232, 0.2);
+      --accent: #39d98a;
+      --accent-2: #3abff8;
+      --highlight: #ffb454;
+      --max: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 8% 10%, rgba(58, 191, 248, 0.18), transparent 30%),
+        radial-gradient(circle at 85% 15%, rgba(57, 217, 138, 0.18), transparent 28%),
+        radial-gradient(circle at 75% 85%, rgba(255, 180, 84, 0.1), transparent 32%),
+        linear-gradient(145deg, #070b17 0%, #0b1020 40%, #101833 100%);
+      min-height: 100vh;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.08;
+      background-image: radial-gradient(#ffffff 0.6px, transparent 0.6px);
+      background-size: 4px 4px;
+      z-index: -1;
+    }
+
+    .container {
+      width: min(var(--max), 92vw);
+      margin: 0 auto;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: rise 0.7s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+
+    @keyframes rise {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(8px);
+      background: rgba(7, 11, 23, 0.72);
+      border-bottom: 1px solid var(--line);
+      z-index: 10;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.85rem 0;
+    }
+
+    .brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+    }
+
+    .links {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .links a:hover {
+      color: var(--text);
+    }
+
+    header {
+      padding: 5rem 0 3rem;
+      position: relative;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      line-height: 1.12;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .tagline {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 62ch;
+      margin-bottom: 1.4rem;
+    }
+
+    .cta {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 0.72rem 1.05rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.94rem;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(130deg, var(--accent), #21c072);
+      color: #04150d;
+      box-shadow: 0 6px 22px rgba(57, 217, 138, 0.35);
+    }
+
+    .btn-secondary {
+      border-color: var(--line);
+      color: var(--text);
+      background: rgba(16, 24, 51, 0.6);
+    }
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1.2rem;
+      box-shadow: 0 10px 30px rgba(4, 8, 20, 0.45);
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      font-size: 0.93rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .meta {
+      list-style: none;
+      display: grid;
+      gap: 0.55rem;
+      font-size: 0.93rem;
+    }
+
+    .meta span {
+      color: var(--highlight);
+      font-weight: 600;
+      margin-right: 0.3rem;
+    }
+
+    section {
+      padding: 1rem 0 2.3rem;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .about {
+      color: var(--muted);
+      max-width: 80ch;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--card);
+      padding: 1rem;
+    }
+
+    .card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.02rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .chip-wrap {
+      display: flex;
+      gap: 0.45rem;
+      flex-wrap: wrap;
+    }
+
+    .chip {
+      border: 1px solid rgba(58, 191, 248, 0.28);
+      color: #d7ebf8;
+      font-size: 0.84rem;
+      padding: 0.3rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(58, 191, 248, 0.08);
+    }
+
+    .project {
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .project p,
+    .project li,
+    .edu p,
+    .contact p {
+      color: var(--muted);
+    }
+
+    ul {
+      padding-left: 1.1rem;
+    }
+
+    .project a,
+    .contact a {
+      color: var(--accent-2);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .project a:hover,
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      padding: 1.2rem 0 2rem;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      .hero,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding-top: 3.6rem;
+      }
+
+      .links {
+        gap: 0.7rem;
+      }
+
+      .hero-card {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="grain"></div>
+
+  <nav>
+    <div class="container nav-inner">
+      <div class="brand">Anshula.dev</div>
+      <ul class="links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container hero">
+      <div>
+        <h1 class="reveal">Hi, I am <span>Anshula Addanki</span><br />Aspiring Web Developer</h1>
+        <p class="tagline reveal delay-1">
+          Computer Science student with hands-on experience building responsive web applications,
+          backend APIs, and secure authentication workflows. Looking for a Web Design and
+          Development Internship to contribute to real-world products.
+        </p>
+        <div class="cta reveal delay-2">
+          <a class="btn btn-primary" href="#contact">Hire Me for Internship</a>
+          <a class="btn btn-secondary" href="https://github.com/anshula-2006" target="_blank" rel="noopener noreferrer">View GitHub</a>
+        </div>
+      </div>
+
+      <aside class="hero-card reveal delay-3">
+        <p>Quick Snapshot</p>
+        <ul class="meta">
+          <li><span>Location:</span> Hyderabad, India</li>
+          <li><span>Phone:</span> +91 89190 89397</li>
+          <li><span>Email:</span> anshulaandal@gmail.com</li>
+          <li><span>Focus:</span> Frontend + Backend Web Development</li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="reveal">
+      <h2 class="section-title">About Me</h2>
+      <p class="about">
+        I am a B.Tech Computer Science student at Keshav Memorial Institute of Technology (2024-2028).
+        I enjoy designing clean interfaces and building web applications end to end. My current strengths include
+        responsive frontend development, API integration, and backend authentication with JWT.
+      </p>
+    </section>
+
+    <section id="skills" class="reveal delay-1">
+      <h2 class="section-title">Skills</h2>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Web & Backend</h3>
+          <div class="chip-wrap">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">REST APIs</span>
+            <span class="chip">JWT Auth</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Programming & Tools</h3>
+          <div class="chip-wrap">
+            <span class="chip">C++</span>
+            <span class="chip">Python (Basic)</span>
+            <span class="chip">Java (Basic)</span>
+            <span class="chip">Git</span>
+            <span class="chip">GitHub</span>
+            <span class="chip">VS Code</span>
+            <span class="chip">OOPs</span>
+            <span class="chip">DSA Basics</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="reveal delay-2">
+      <h2 class="section-title">Projects</h2>
+      <div class="grid-2">
+        <article class="card project">
+          <h3>VitaMind - Virtual Mental Wellness Web Application</h3>
+          <p>
+            Designed and developed a responsive mental wellness platform with user-friendly UI and secure backend flows.
+          </p>
+          <ul>
+            <li>Built backend APIs using FastAPI and implemented JWT-based authentication.</li>
+            <li>Improved UI/UX and ensured strong mobile responsiveness.</li>
+            <li>Deployed the application on Vercel.</li>
+          </ul>
+          <a href="https://vita-mind-nu.vercel.app" target="_blank" rel="noopener noreferrer">Live Project</a>
+        </article>
+
+        <article class="card project">
+          <h3>AI-Powered Quiz Generator</h3>
+          <p>
+            Built an AI-based quiz generation system that creates MCQ and short-answer questions.
+          </p>
+          <ul>
+            <li>Used OpenAI API for content generation workflows.</li>
+            <li>Designed REST API structure for quiz request/response handling.</li>
+            <li>Worked on prompt logic and backend architecture planning.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="reveal delay-3">
+      <h2 class="section-title">Education</h2>
+      <article class="card edu">
+        <h3>B.Tech - Computer Science & Engineering</h3>
+        <p>Keshav Memorial Institute of Technology</p>
+        <p>2024-2028 (Expected)</p>
+      </article>
+    </section>
+
+    <section id="contact" class="reveal delay-4">
+      <h2 class="section-title">Contact</h2>
+      <article class="card contact">
+        <p>Email: <a href="mailto:anshulaandal@gmail.com">anshulaandal@gmail.com</a></p>
+        <p>Phone: <a href="tel:+918919089397">+91 89190 89397</a></p>
+        <p>GitHub: <a href="https://github.com/anshula-2006" target="_blank" rel="noopener noreferrer">github.com/anshula-2006</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/anshula-addanki-b73ab537a/" target="_blank" rel="noopener noreferrer">linkedin.com/in/anshula-addanki-b73ab537a</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Anshula Addanki. Built for Web Design & Development Internship applications.
+  </footer>
+</body>
+</html>
