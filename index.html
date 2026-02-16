@@ -3,160 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anshula Addanki | Web Developer Portfolio</title>
-
-  <!-- Modern professional typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  <!-- External stylesheet for cleaner structure and maintainability -->
-  <link rel="stylesheet" href="styles.css" />
+  <title>Anshula | Web Development Intern</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Main site header: name, role, and tagline at the top as requested -->
-  <header class="site-header">
-    <div class="container">
-      <nav class="top-nav" aria-label="Primary">
-        <a class="brand" href="#">Anshula Addanki</a>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
 
-      <div class="hero-content">
-        <p class="role">Web Developer</p>
-        <h1>Building clean, responsive websites and full-stack web applications.</h1>
-        <p class="tagline">
-          I design and develop user-focused digital experiences with modern frontend interfaces and secure backend APIs.
-        </p>
-      </div>
+<header class="hero">
+  <div class="hero-content">
+    <h1>Anshula</h1>
+    <p class="subtitle">
+      2nd-year Computer Science student learning web development by building real, hands-on projects.
+    </p>
+
+    <div class="hero-actions">
+      <a href="assets/resume/Anshula_Resume.pdf" target="_blank" class="btn primary">
+        Download Resume
+      </a>
+      <a href="https://github.com/anshula-2006" target="_blank" class="btn">
+        GitHub
+      </a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <!-- About section placed directly below header per requirement -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>
-          I am a Computer Science student and aspiring web developer based in Hyderabad. I build responsive web applications with strong UI structure, API integration, and authentication workflows. I am looking for a web design and development internship where I can contribute to real projects and keep improving my full-stack skills.
+<main>
+
+  <section class="projects">
+
+    <!-- VitaMind -->
+    <article class="project featured">
+      <header>
+        <h2>VitaMind</h2>
+        <p class="project-desc">
+          A student-built mental wellness web application focused on clean UI,
+          basic dashboard insights, and an experimental AI chat feature.
         </p>
-      </div>
-    </section>
+        <p class="tech">HTML • CSS • JavaScript • FastAPI</p>
 
-    <!-- Featured projects with thumbnail, title, one-line summary, and icon links -->
-    <section id="projects" class="section section-alt">
-      <div class="container">
-        <h2>Featured Projects</h2>
-
-        <div class="projects-grid">
-          <article class="project-card">
-            <!-- Placeholder image path as requested -->
-            <img src="PATH_TO_IMAGE/vitamind-thumbnail.jpg" alt="VitaMind project thumbnail" class="project-thumb" />
-            <div class="project-body">
-              <h3>VitaMind - Virtual Mental Wellness App</h3>
-              <p>Responsive mental wellness platform with FastAPI backend and JWT authentication.</p>
-
-              <div class="project-links" aria-label="Project links">
-                <a href="https://vita-mind-nu.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Open live project">
-                  <!-- Live link icon -->
-                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"></path>
-                    <path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"></path>
-                  </svg>
-                  <span class="sr-only">Live Demo</span>
-                </a>
-
-                <a href="https://github.com/anshula-2006" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository">
-                  <!-- GitHub icon -->
-                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.6-1.4-5.6-6.2 0-1.4.5-2.5 1.3-3.4-.1-.3-.6-1.6.1-3.3 0 0 1.1-.4 3.5 1.3 1-.3 2.1-.4 3.1-.4s2.1.1 3.1.4c2.4-1.7 3.5-1.3 3.5-1.3.7 1.7.2 3 .1 3.3.8.9 1.3 2 1.3 3.4 0 4.8-2.9 5.9-5.7 6.2.5.4.8 1.1.8 2.3v3.4c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"></path>
-                  </svg>
-                  <span class="sr-only">GitHub</span>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <!-- Placeholder image path as requested -->
-            <img src="PATH_TO_IMAGE/quiz-generator-thumbnail.jpg" alt="AI Quiz Generator project thumbnail" class="project-thumb" />
-            <div class="project-body">
-              <h3>AI-Powered Quiz Generator</h3>
-              <p>Web-based quiz generator using OpenAI workflows for MCQ and short-answer creation.</p>
-
-              <div class="project-links" aria-label="Project links">
-                <a href="#" aria-label="Open live project">
-                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"></path>
-                    <path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"></path>
-                  </svg>
-                  <span class="sr-only">Live Demo</span>
-                </a>
-
-                <a href="https://github.com/anshula-2006" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub repository">
-                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.6-1.4-5.6-6.2 0-1.4.5-2.5 1.3-3.4-.1-.3-.6-1.6.1-3.3 0 0 1.1-.4 3.5 1.3 1-.3 2.1-.4 3.1-.4s2.1.1 3.1.4c2.4-1.7 3.5-1.3 3.5-1.3.7 1.7.2 3 .1 3.3.8.9 1.3 2 1.3 3.4 0 4.8-2.9 5.9-5.7 6.2.5.4.8 1.1.8 2.3v3.4c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"></path>
-                  </svg>
-                  <span class="sr-only">GitHub</span>
-                </a>
-              </div>
-            </div>
-          </article>
+        <div class="project-actions">
+          <a href="https://vita-mind-nu.vercel.app/" target="_blank" class="btn primary small">
+            Live App
+          </a>
         </div>
+      </header>
+
+      <div class="image-grid">
+        <img src="assets/images/vitamind-hero.png" alt="VitaMind landing page" />
+        <img src="assets/images/vitamind-dashboard.png" alt="VitaMind dashboard" />
+        <img src="assets/images/vitamind-chat.png" alt="VitaMind chat interface" />
       </div>
-    </section>
+    </article>
 
-    <!-- Skills section after projects per requested hierarchy -->
-    <section id="skills" class="section">
-      <div class="container">
-        <h2>Skills</h2>
-        <ul class="skills-list">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>FastAPI</li>
-          <li>Node.js</li>
-          <li>REST APIs</li>
-          <li>JWT Authentication</li>
-          <li>Git & GitHub</li>
-          <li>C++</li>
-          <li>Python (Basic)</li>
-          <li>Java (Basic)</li>
-        </ul>
+    <!-- Quiz Generator -->
+    <article class="project ongoing">
+      <header>
+        <h2>
+          AI Quiz Generator
+          <span class="status">Ongoing</span>
+        </h2>
+        <p class="project-desc">
+          An ongoing learning project to understand backend APIs and prompt design
+          by generating quizzes from topics.
+        </p>
+        <p class="role">
+          <strong>Role:</strong> Backend & Prompt Logic (Member 1)
+        </p>
+        <p class="tech">JavaScript • FastAPI • OpenAI API</p>
+      </header>
+
+      <div class="image-single">
+        <img src="assets/images/quiz-generator.png" alt="Quiz generator output" />
       </div>
-    </section>
+    </article>
 
-    <!-- Contact and resume download grouped in final main section -->
-    <section id="contact" class="section section-alt">
-      <div class="container contact-grid">
-        <div>
-          <h2>Contact</h2>
-          <p>Email: <a href="mailto:anshulaandal@gmail.com">anshulaandal@gmail.com</a></p>
-          <p>Phone: <a href="tel:+918919089397">+91 89190 89397</a></p>
-          <p>GitHub: <a href="https://github.com/anshula-2006" target="_blank" rel="noopener noreferrer">github.com/anshula-2006</a></p>
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/anshula-addanki-b73ab537a/" target="_blank" rel="noopener noreferrer">linkedin.com/in/anshula-addanki-b73ab537a</a></p>
-        </div>
+  </section>
 
-        <div class="resume-box">
-          <h3>Resume</h3>
-          <p>Download my latest resume for internship applications.</p>
-          <!-- Download button linked to local resume file -->
-          <a class="resume-btn" href="Resume WD.pdf" download>Download Resume</a>
-        </div>
-      </div>
-    </section>
-  </main>
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>
+      <a href="mailto:anshulaandal@gmail.com">anshulaandal@gmail.com</a>
+    </p>
+  </section>
 
-  <!-- Semantic footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 Anshula Addanki. All rights reserved.</p>
-    </div>
-  </footer>
+</main>
+
+<footer>
+  <p>© 2026 Anshula</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
