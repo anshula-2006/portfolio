@@ -2,121 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anshula | Full Stack Developer</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anshula | Web Development Intern</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- Dark Mode Toggle -->
-<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-
 <!-- HERO -->
-<section class="hero reveal">
-  <h1>Building real-world web apps,<br>not just resumes.</h1>
-  <p>
-    Computer Science student focused on full-stack web development.<br>
-    Clean UI. Secure backend. SaaS mindset.
-  </p>
+<header class="hero">
+  <div class="hero-inner">
+    <span class="pill">2nd Year B.Tech · CSE</span>
+    <h1>Web development intern building real, usable products.</h1>
+    <p>
+      I’m Anshula, a Computer Science student at Keshav Memorial Institute of Technology,
+      focused on learning web development by building practical, end-to-end applications.
+    </p>
 
-  <div class="buttons">
-    <a href="#projects" class="btn primary">View Projects</a>
-    <a href="Anshula_Resume.pdf" target="_blank"
-       class="btn" onclick="trackResume()">Download Resume</a>
-    <a href="#" class="btn"
-       onclick="openModal(); trackResume()">Preview Resume</a>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about reveal">
-  <h2>About Me</h2>
-  <p>
-    I’m a Computer Science undergraduate at KMIT, Hyderabad.
-    I build full-stack applications with strong UI/UX,
-    authentication, and production-ready deployments.
-    Currently seeking web development internships.
-  </p>
-</section>
-
-<!-- SKILLS -->
-<section class="skills reveal">
-  <h2>Skills</h2>
-  <div class="skill-grid">
-    <div class="card">
-      <h3>Frontend</h3>
-      <p>HTML, CSS, JavaScript<br>Responsive UI</p>
-    </div>
-    <div class="card">
-      <h3>Backend</h3>
-      <p>FastAPI, Node.js<br>REST APIs, JWT</p>
-    </div>
-    <div class="card">
-      <h3>Programming</h3>
-      <p>C++, Python (basic), Java (basic)</p>
-    </div>
-    <div class="card">
-      <h3>Tools & Concepts</h3>
-      <p>Git, GitHub, VS Code<br>OOPs, Time & Space</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="assets/resume/Anshula_Resume.pdf" target="_blank">
+        Download Resume
+      </a>
+      <a class="btn" href="https://github.com/anshula-2006" target="_blank">
+        GitHub
+      </a>
+      <a class="btn" href="https://www.linkedin.com/in/anshula-addanki-b73ab537a/" target="_blank">
+        LinkedIn
+      </a>
     </div>
   </div>
-</section>
+</header>
 
-<!-- PROJECTS -->
-<section class="projects" id="projects">
-  <h2 class="reveal">Projects</h2>
+<main>
 
-  <!-- VitaMind -->
-  <div class="project-card reveal">
-    <div class="project-images">
-      <img src="assets/images/vitamind-hero.png">
-      <img src="assets/images/vitamind-dashboard.png">
-      <img src="assets/images/vitamind-chat.png">
+  <!-- SKILLS -->
+  <section class="skills">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Frontend</h3>
+        <p>HTML, CSS, JavaScript</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Backend</h3>
+        <p>Python, FastAPI, REST APIs</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Tools</h3>
+        <p>Git, GitHub, Vercel</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Concepts</h3>
+        <p>API integration, authentication basics, UI/UX fundamentals</p>
+      </div>
     </div>
-    <div>
-      <h3>VitaMind – Mental Wellness SaaS</h3>
-      <p>
-        A full-stack mental wellness platform featuring daily check-ins,
-        mood tracking, journaling, and AI-assisted chat support.
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects">
+    <h2>Projects</h2>
+
+    <!-- VitaMind -->
+    <article class="project featured">
+      <div class="project-header">
+        <h3>VitaMind</h3>
+        <span class="tag">Featured</span>
+      </div>
+
+      <p class="project-desc">
+        A student-built mental wellness web application designed to explore dashboard-based UI,
+        user flows, and an experimental AI chat assistant.
       </p>
-      <p class="tech">FastAPI • JWT Auth • SaaS UI • Vercel</p>
-      <a href="https://vita-mind-nu.vercel.app" target="_blank">Live Demo →</a>
-    </div>
-  </div>
 
-  <!-- Quizzy -->
-  <div class="project-card reveal">
-    <img src="assets/images/quizzy-hero.png">
-    <div>
-      <h3>AI-Powered Quiz Generator</h3>
-      <p>
-        SaaS-style AI quiz generator that creates MCQs and short-answer
-        questions instantly from user-provided topics.
+      <ul class="points">
+        <li>Designed a clean, SaaS-style frontend interface</li>
+        <li>Implemented dashboard views and chat UI</li>
+        <li>Connected frontend with backend APIs</li>
+      </ul>
+
+      <p class="tech">HTML · CSS · JavaScript · FastAPI</p>
+
+      <a class="link" href="https://vita-mind-nu.vercel.app/" target="_blank">
+        View Live App →
+      </a>
+
+      <div class="image-grid">
+        <img src="assets/images/vitamind-hero.png" alt="VitaMind landing" />
+        <img src="assets/images/vitamind-dashboard.png" alt="VitaMind dashboard" />
+        <img src="assets/images/vitamind-chat.png" alt="VitaMind chat" />
+      </div>
+    </article>
+
+    <!-- Quiz Generator -->
+    <article class="project">
+      <div class="project-header">
+        <h3>AI Quiz Generator</h3>
+        <span class="tag muted">Ongoing</span>
+      </div>
+
+      <p class="project-desc">
+        An ongoing learning project focused on understanding backend APIs and prompt design
+        by generating quizzes dynamically from user-provided topics.
       </p>
-      <p class="tech">OpenAI API • REST APIs • Prompt Engineering</p>
-      <a href="https://github.com/anshula-2006" target="_blank">GitHub →</a>
-    </div>
-  </div>
-</section>
 
-<!-- CONTACT -->
-<section class="contact reveal">
-  <h2>Let’s Build Something</h2>
-  <p>
-    <a href="mailto:anshulaandal@gmail.com">anshulaandal@gmail.com</a><br>
-    <a href="https://github.com/anshula-2006" target="_blank">GitHub</a> ·
-    <a href="https://linkedin.com/in/anshula-addanki-b73ab537a"
-       target="_blank">LinkedIn</a>
-  </p>
-</section>
+      <ul class="points">
+        <li>Worked on backend logic and prompt handling</li>
+        <li>Integrated API responses into usable outputs</li>
+      </ul>
 
-<!-- RESUME MODAL -->
-<div class="modal" id="resumeModal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">×</span>
-    <iframe src="Anshula_Resume.pdf"></iframe>
-  </div>
-</div>
+      <p class="role">Role: Backend & Prompt Logic (Member 1)</p>
+      <p class="tech">JavaScript · FastAPI · OpenAI API</p>
+
+      <img class="single-image" src="assets/images/quiz-generator.png" alt="Quiz Generator" />
+    </article>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="education">
+    <h2>Education</h2>
+    <p>
+      <strong>B.Tech – Computer Science and Engineering</strong><br />
+      Keshav Memorial Institute of Technology<br />
+      2nd Year Undergraduate
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:anshulaandal@gmail.com">anshulaandal@gmail.com</a></p>
+    <p>Phone: +91-8919089397</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Anshula</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
