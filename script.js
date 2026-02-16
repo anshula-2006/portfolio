@@ -1,15 +1,35 @@
-// Smooth fade-in on page load
-document.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.add("loaded");
-});
+// Scroll reveal
+const reveals = document.querySelectorAll(".reveal");
 
-// Smooth scrolling for internal links (future-proof)
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener("click", e => {
-    const target = document.querySelector(link.getAttribute("href"));
-    if (!target) return;
-
-    e.preventDefault();
-    target.scrollIntoView({ behavior: "smooth" });
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add("active");
+    }
   });
 });
+
+// Dark mode
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+}
+
+// Resume analytics (ready for GA)
+function trackResume() {
+  console.log("Resume clicked");
+  if (window.gtag) {
+    gtag("event", "resume_click", {
+      event_category: "engagement",
+      event_label: "resume"
+    });
+  }
+}
+
+// Modal
+function openModal() {
+  document.getElementById("resumeModal").style.display = "block";
+}
+function closeModal() {
+  document.getElementById("resumeModal").style.display = "none";
+}

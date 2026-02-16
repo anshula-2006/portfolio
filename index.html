@@ -2,94 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anshula | Web Development Intern</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anshula | Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<header class="hero">
-  <div class="hero-content">
-    <h1>Anshula</h1>
-    <p class="subtitle">
-      2nd-year Computer Science student learning web development by building real, hands-on projects.
-    </p>
+<!-- Dark Mode Toggle -->
+<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 
-    <div class="hero-actions">
-      <a href="assets/resume/Anshula_Resume.pdf" target="_blank" class="btn primary">
-        Download Resume
-      </a>
-      <a href="https://github.com/anshula-2006" target="_blank" class="btn">
-        GitHub
-      </a>
+<!-- HERO -->
+<section class="hero reveal">
+  <h1>Building real-world web apps,<br>not just resumes.</h1>
+  <p>
+    Computer Science student focused on full-stack web development.<br>
+    Clean UI. Secure backend. SaaS mindset.
+  </p>
+
+  <div class="buttons">
+    <a href="#projects" class="btn primary">View Projects</a>
+    <a href="Anshula_Resume.pdf" target="_blank"
+       class="btn" onclick="trackResume()">Download Resume</a>
+    <a href="#" class="btn"
+       onclick="openModal(); trackResume()">Preview Resume</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about reveal">
+  <h2>About Me</h2>
+  <p>
+    I’m a Computer Science undergraduate at KMIT, Hyderabad.
+    I build full-stack applications with strong UI/UX,
+    authentication, and production-ready deployments.
+    Currently seeking web development internships.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section class="skills reveal">
+  <h2>Skills</h2>
+  <div class="skill-grid">
+    <div class="card">
+      <h3>Frontend</h3>
+      <p>HTML, CSS, JavaScript<br>Responsive UI</p>
+    </div>
+    <div class="card">
+      <h3>Backend</h3>
+      <p>FastAPI, Node.js<br>REST APIs, JWT</p>
+    </div>
+    <div class="card">
+      <h3>Programming</h3>
+      <p>C++, Python (basic), Java (basic)</p>
+    </div>
+    <div class="card">
+      <h3>Tools & Concepts</h3>
+      <p>Git, GitHub, VS Code<br>OOPs, Time & Space</p>
     </div>
   </div>
-</header>
+</section>
 
-<main>
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <h2 class="reveal">Projects</h2>
 
-  <section class="projects">
+  <!-- VitaMind -->
+  <div class="project-card reveal">
+    <div class="project-images">
+      <img src="images/vitamind-hero.png">
+      <img src="images/vitamind-dashboard.png">
+      <img src="images/vitamind-chat.png">
+    </div>
+    <div>
+      <h3>VitaMind – Mental Wellness SaaS</h3>
+      <p>
+        A full-stack mental wellness platform featuring daily check-ins,
+        mood tracking, journaling, and AI-assisted chat support.
+      </p>
+      <p class="tech">FastAPI • JWT Auth • SaaS UI • Vercel</p>
+      <a href="https://vita-mind-nu.vercel.app" target="_blank">Live Demo →</a>
+    </div>
+  </div>
 
-    <!-- VitaMind -->
-    <article class="project featured">
-      <header>
-        <h2>VitaMind</h2>
-        <p class="project-desc">
-          A student-built mental wellness web application focused on clean UI,
-          basic dashboard insights, and an experimental AI chat feature.
-        </p>
-        <p class="tech">HTML • CSS • JavaScript • FastAPI</p>
+  <!-- Quizzy -->
+  <div class="project-card reveal">
+    <img src="images/quizzy-hero.png">
+    <div>
+      <h3>AI-Powered Quiz Generator</h3>
+      <p>
+        SaaS-style AI quiz generator that creates MCQs and short-answer
+        questions instantly from user-provided topics.
+      </p>
+      <p class="tech">OpenAI API • REST APIs • Prompt Engineering</p>
+      <a href="https://github.com/anshula-2006" target="_blank">GitHub →</a>
+    </div>
+  </div>
+</section>
 
-        <div class="project-actions">
-          <a href="https://vita-mind-nu.vercel.app/" target="_blank" class="btn primary small">
-            Live App
-          </a>
-        </div>
-      </header>
+<!-- CONTACT -->
+<section class="contact reveal">
+  <h2>Let’s Build Something</h2>
+  <p>
+    <a href="mailto:anshulaandal@gmail.com">anshulaandal@gmail.com</a><br>
+    <a href="https://github.com/anshula-2006" target="_blank">GitHub</a> ·
+    <a href="https://linkedin.com/in/anshula-addanki-b73ab537a"
+       target="_blank">LinkedIn</a>
+  </p>
+</section>
 
-      <div class="image-grid">
-        <img src="assets/images/vitamind-hero.png" alt="VitaMind landing page" />
-        <img src="assets/images/vitamind-dashboard.png" alt="VitaMind dashboard" />
-        <img src="assets/images/vitamind-chat.png" alt="VitaMind chat interface" />
-      </div>
-    </article>
-
-    <!-- Quiz Generator -->
-    <article class="project ongoing">
-      <header>
-        <h2>
-          AI Quiz Generator
-          <span class="status">Ongoing</span>
-        </h2>
-        <p class="project-desc">
-          An ongoing learning project to understand backend APIs and prompt design
-          by generating quizzes from topics.
-        </p>
-        <p class="role">
-          <strong>Role:</strong> Backend & Prompt Logic (Member 1)
-        </p>
-        <p class="tech">JavaScript • FastAPI • OpenAI API</p>
-      </header>
-
-      <div class="image-single">
-        <img src="assets/images/quiz-generator.png" alt="Quiz generator output" />
-      </div>
-    </article>
-
-  </section>
-
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>
-      <a href="mailto:anshulaandal@gmail.com">anshulaandal@gmail.com</a>
-    </p>
-  </section>
-
-</main>
-
-<footer>
-  <p>© 2026 Anshula</p>
-</footer>
+<!-- RESUME MODAL -->
+<div class="modal" id="resumeModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <iframe src="Anshula_Resume.pdf"></iframe>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
